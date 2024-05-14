@@ -145,7 +145,7 @@ socket.on('play', (ennemyPlayer) => {
             return;
         }
 
-        setTurnMessage('alert-success', 'alert-info', `C'est au tour de <b>${ennemyUsername}</b> de jouer`)
+        setTurnMessage('alert-success', 'alert-info', `C'est au tour d'<b>${ennemyUsername}</b> de jouer`)
         player.turn = false;
     }
 });
@@ -166,7 +166,7 @@ function startGame(players) {
     if (player.host && player.turn) {
         setTurnMessage('alert-info', 'alert-success', "C'est ton tour de jouer");
     } else {
-        setTurnMessage('alert-success', 'alert-info', `C'est au tour de <b>${ennemyUsername}</b> de jouer`);
+        setTurnMessage('alert-success', 'alert-info', `C'est au tour d'<b>${ennemyUsername}</b> de jouer`);
     }
 }
 
