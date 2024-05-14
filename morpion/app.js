@@ -17,11 +17,11 @@ app.use('/jquery', express.static(path.join(__dirname, 'node_modules/jquery/dist
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'templates/games/game.html'));
+    res.sendFile(path.join(__dirname, 'templates/game.html'));
 });
 
-app.get('/games/game', (req, res) => {
-    res.sendFile(path.join(__dirname, 'templates/games/game.html'));
+app.get('/game', (req, res) => {
+    res.sendFile(path.join(__dirname, 'templates/game.html'));
 });
 
 http.listen(port, () => {
