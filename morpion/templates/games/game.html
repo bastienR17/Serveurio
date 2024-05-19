@@ -9,58 +9,42 @@
 </head>
 
 <body>
-
     <div >
         <div >
             <div >
-
                 <div class="alert d-none" role="alert" id="turn-message"></div>
-
                 <div class="card" id="user-card">
-                    <div class="card-body">
-
-                        <form method="POST" id="form">
-                            <div >
-
+                    <div class="popup-container">
+                        <div class="popup" id="create-room-popup">
+                            <h2>Créer ou Rejoindre un Salon</h2>
+                            <form method="POST" id="form">
                                 <label for="username" class="form-label">Nom d'utilisateur</label>
-                                <input type="text" class="form-control" id="username" minlength="2" maxlength="20"
-                                    placeholder="Saisir votre nom d'utilisateur" required>
-                            </div>
-                            <button class="btn btn-primary" id="start" type="submit">Créer un salon privée</button>
-                        </form>
-
-                    </div>
-                </div>
-
-                <div class="card" id="rooms-card">
-                    <div class="card-header">Salons disponibles</div>
-                    <ul class="list-group list-group-flush" id="rooms-list"></ul>
-                </div>
-
-                <div  id="waiting-area">
-                    <div class="card ">
-                        <div class="card-header">En attente d'un autre joueur</div>
-                        <div class="card-body">
-                            <div  role="status">
-                                <span>Loading...</span>
-                            </div>
+                                <input type="text" class="form-control" id="username" minlength="2" maxlength="20" placeholder="Saisir votre nom d'utilisateur" required>
+                                <button class="btn btn-primary" id="start" type="submit">Créer un salon privée</button>
+                                <button class="btn btn-secondary" id="join" type="button">Rejoindre un salon</button>
+                            </form>
+                        </div>
+                        <div class="cardi" id="rooms-card">
+                            <div class="card-header">Salons disponibles</div>
+                            <ul class="list-group list-group-flush" id="rooms-list"></ul>
                         </div>
                     </div>
-
+                </div>
+                <div  id="waiting-area">
                     <div class="card">
-                        <div class="card-body">
-                            Partage ce lien pour inviter quelqu'un à jouer avec toi
+                        <div class="card-body" style="align-items: center;justify-content: center;display: flex;">
+                            Partage ce lien avec un autre jouer:
                             <span id="link-to-share"></span>
                         </div>
                     </div>
                 </div>
 
                 <div class="card " id="game-card">
-                    <div class="card-header">
+                    <div class="card-header" style="display: flex; align-items: center;justify-content: center;">
                         Morpion
                     </div>
                     <div class="card-body ">
-                        <table class="board">
+                        <table class="board" style="align-items: center;justify-content: center;display: flex; flex-direction: column;">
                             <tr>
                                 <td class="cell" id="cell-1-1"></td>
                                 <td class="cell" id="cell-1-2"></td>
